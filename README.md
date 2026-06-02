@@ -1,7 +1,17 @@
-# A002 · 코드넥스트 (CodeNext) — AI·코딩 교육 랜딩 페이지
+# A002 · 코드라온 (Coderaon) — AI·코딩 교육 랜딩 페이지
 
-초등 3학년부터 고등학생까지를 위한 AI·코딩 교육 아카데미 **코드넥스트**의 원페이지
-마케팅 사이트입니다. Vite + React 18 + TypeScript, 디자인 방향은 **Swiss / 에디토리얼**.
+초등 3학년부터 고등학생까지를 위한 AI·코딩 교육 아카데미 **코드라온**(가공의 데모
+브랜드)의 원페이지 마케팅 사이트입니다. Vite + React 18 + TypeScript, 디자인 방향은
+**Swiss / 에디토리얼**.
+
+![코드라온 히어로 미리보기](docs/preview-hero.png)
+
+<table>
+  <tr>
+    <td width="62%"><img src="docs/preview-full.png" alt="전체 페이지 미리보기" /></td>
+    <td width="38%"><img src="docs/preview-mobile.png" alt="모바일 미리보기" /></td>
+  </tr>
+</table>
 
 ## 실행
 

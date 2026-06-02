@@ -1,12 +1,12 @@
 /**
- * 랜딩 페이지 콘텐츠 (코드넥스트).
+ * 랜딩 페이지 콘텐츠 (코드라온 — 가공의 데모 브랜드).
  * NOTE: 통계·강사·후기·요금·정원 등은 [가상/예시] 플레이스홀더입니다.
  * 운영 데이터로 교체하세요. (자세한 목록은 README의 disclaimer 참고)
  */
 
 export const brand = {
-  name: '코드넥스트',
-  nameEn: 'CodeNext',
+  name: '코드라온',
+  nameEn: 'Coderaon',
   tagline: '코딩으로 생각하고, AI로 만들어요.',
 } as const;
 
