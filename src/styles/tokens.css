@@ -1,0 +1,107 @@
+/* tokens.css — 코드넥스트 Swiss/editorial design system */
+:root {
+  /* ---------- Color · Surfaces ---------- */
+  --color-surface:        oklch(98.4% 0.004 95);
+  --color-surface-raised: oklch(100% 0 0);
+  --color-surface-sunken: oklch(96.2% 0.006 95);
+  --color-surface-ink:    oklch(22% 0.02 265);
+
+  /* ---------- Color · Ink scale ---------- */
+  --color-ink-hi:     oklch(20% 0.018 265);
+  --color-ink-mid:    oklch(38% 0.014 265);
+  --color-ink-lo:     oklch(55% 0.012 265);
+  --color-ink-faint:  oklch(72% 0.008 265);
+  --color-ink-onDark: oklch(96% 0.004 95);
+
+  /* ---------- Color · Accent (cobalt) ---------- */
+  --color-accent:        oklch(54% 0.20 258);
+  --color-accent-hover:  oklch(48% 0.21 258);
+  --color-accent-active: oklch(42% 0.21 258);
+  --color-accent-tint:   oklch(94% 0.04 258);
+
+  /* ---------- Color · Signal (orange) ---------- */
+  --color-signal:        oklch(70% 0.18 47);
+  --color-signal-hover:  oklch(64% 0.19 47);
+  --color-signal-active: oklch(58% 0.19 47);
+  --color-signal-tint:   oklch(95% 0.04 60);
+
+  /* ---------- Color · Lines ---------- */
+  --color-rule:        oklch(20% 0.018 265 / 0.16);
+  --color-rule-strong: oklch(20% 0.018 265 / 0.42);
+  --color-rule-onDark: oklch(96% 0.004 95 / 0.18);
+
+  /* ---------- Color · Semantic ---------- */
+  --color-success: oklch(60% 0.15 150);
+  --color-warning: oklch(76% 0.16 78);
+  --color-error:   oklch(58% 0.20 27);
+
+  /* ---------- Typography · Families ---------- */
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system,
+               "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  --font-display: "Space Grotesk", var(--font-sans);
+  --font-mono: "Space Grotesk", ui-monospace, SFMono-Regular, monospace;
+
+  /* ---------- Typography · Scale ---------- */
+  --text-display: clamp(2.75rem, 1.2rem + 7vw, 6.5rem);
+  --text-h1:      clamp(2rem, 1.1rem + 4vw, 3.75rem);
+  --text-h2:      clamp(1.5rem, 1rem + 2.2vw, 2.5rem);
+  --text-h3:      clamp(1.2rem, 1rem + 1vw, 1.5rem);
+  --text-body:    clamp(1rem, 0.96rem + 0.25vw, 1.125rem);
+  --text-small:   clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);
+  --text-label:   0.75rem;
+  --text-numeral: clamp(3rem, 2rem + 6vw, 9rem);
+
+  /* ---------- Typography · Weights ---------- */
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-semibold: 600;
+  --weight-bold:    700;
+  --weight-black:   800;
+
+  /* ---------- Typography · Metrics ---------- */
+  --tracking-tight:  -0.03em;
+  --tracking-normal: 0;
+  --tracking-label:  0.14em;
+  --leading-tight:   1.02;
+  --leading-snug:    1.25;
+  --leading-body:    1.7;
+
+  /* ---------- Spacing ---------- */
+  --space-1: 0.25rem;  --space-2: 0.5rem;  --space-3: 0.75rem;
+  --space-4: 1rem;     --space-5: 1.5rem;  --space-6: 2rem;
+  --space-7: 3rem;     --space-8: 4rem;    --space-9: 6rem;
+  --space-10: 8rem;
+  --space-section: clamp(4rem, 3rem + 6vw, 9rem);
+
+  /* ---------- Grid ---------- */
+  --grid-max:    1320px;
+  --grid-gutter: clamp(1rem, 0.5rem + 1.5vw, 1.75rem);
+  --grid-margin: clamp(1.25rem, 0.5rem + 4vw, 4rem);
+  --grid-cols: 12;
+
+  /* ---------- Radius (restrained — Swiss) ---------- */
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-pill: 999px;
+
+  /* ---------- Elevation ---------- */
+  --shadow-sm: 0 1px 2px oklch(20% 0.018 265 / 0.06);
+  --shadow-md: 0 8px 24px oklch(20% 0.018 265 / 0.08);
+
+  /* ---------- Motion ---------- */
+  --duration-fast:   150ms;
+  --duration-normal: 320ms;
+  --duration-slow:   560ms;
+  --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-standard:  cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ---------- Layout misc ---------- */
+  --nav-height: 4.5rem;
+  --focus-ring: 2px solid var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  :root { --grid-cols: 4; }
+}

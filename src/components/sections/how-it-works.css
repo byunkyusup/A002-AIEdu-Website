@@ -1,0 +1,83 @@
+.how__head { grid-column: 1 / -1; margin-bottom: var(--space-7); }
+.how__title {
+  font-size: var(--text-h2);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-snug);
+  color: var(--color-ink-hi);
+  margin-top: var(--space-4);
+}
+.how__title-em { color: var(--color-accent); }
+
+.how__steps {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  counter-reset: step;
+  margin-bottom: var(--space-9);
+}
+.how-step {
+  position: relative;
+  padding-top: var(--space-5);
+  border-top: 2px solid var(--color-ink-hi);
+}
+.how-step__no {
+  font-size: var(--text-h1);
+  font-weight: var(--weight-black);
+  color: var(--color-accent);
+  line-height: 1;
+  display: block;
+  margin-bottom: var(--space-4);
+}
+.how-step__title {
+  font-size: var(--text-h3);
+  font-weight: var(--weight-bold);
+  color: var(--color-ink-hi);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-2);
+}
+.how-step__text { font-size: var(--text-small); color: var(--color-ink-mid); }
+
+/* instructors */
+.how__instructors { grid-column: 1 / -1; }
+.how__instructors-title {
+  font-size: var(--text-h3);
+  font-weight: var(--weight-bold);
+  color: var(--color-ink-hi);
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-rule);
+}
+.how__instructor-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+.instructor { display: flex; gap: var(--space-4); align-items: flex-start; }
+.instructor__avatar {
+  flex-shrink: 0;
+  width: 3rem; height: 3rem;
+  display: grid; place-items: center;
+  background: var(--color-accent-tint);
+  color: var(--color-accent);
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  font-size: 1.3rem;
+  border-radius: var(--radius-md);
+}
+.instructor__name { font-weight: var(--weight-bold); color: var(--color-ink-hi); }
+.instructor__credential {
+  font-size: var(--text-small);
+  color: var(--color-ink-mid);
+  margin-block: 0.15rem 0.4rem;
+}
+.instructor__track { font-size: var(--text-small); color: var(--color-ink-lo); }
+
+@media (max-width: 920px) {
+  .how__steps { grid-template-columns: repeat(2, 1fr); }
+  .how__instructor-list { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .how__steps { grid-template-columns: 1fr; }
+}

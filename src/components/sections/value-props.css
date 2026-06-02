@@ -1,0 +1,85 @@
+.value-props__head { grid-column: 1 / -1; max-width: 52rem; margin-bottom: var(--space-7); }
+.value-props__title {
+  font-size: var(--text-h2);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-snug);
+  color: var(--color-ink-hi);
+  margin-block: var(--space-4) var(--space-4);
+}
+.value-props__title-em {
+  color: var(--color-accent);
+  border-bottom: 0.12em solid var(--color-signal);
+  padding-bottom: 0.02em;
+}
+.value-props__lead { color: var(--color-ink-mid); max-width: 48ch; }
+
+.value-props__list {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+.vp-card {
+  position: relative;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  overflow: hidden;
+  transition:
+    transform var(--duration-normal) var(--ease-out-expo),
+    box-shadow var(--duration-normal) var(--ease-out-expo),
+    border-color var(--duration-normal) var(--ease-standard);
+}
+.vp-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--color-accent);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform var(--duration-normal) var(--ease-out-expo);
+}
+.vp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: transparent;
+}
+.vp-card:hover::before { transform: scaleY(1); }
+
+.vp-card__index {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-5);
+  font-size: 2.2rem;
+  font-weight: var(--weight-bold);
+  color: var(--color-surface-sunken);
+  line-height: 1;
+}
+.vp-card__tag {
+  display: inline-block;
+  font-size: var(--text-label);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+  background: var(--color-accent-tint);
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-4);
+}
+.vp-card__title {
+  font-size: var(--text-h3);
+  font-weight: var(--weight-bold);
+  color: var(--color-ink-hi);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-3);
+  max-width: 18ch;
+}
+.vp-card__body { font-size: var(--text-small); color: var(--color-ink-mid); }
+
+@media (max-width: 768px) {
+  .value-props__list { grid-template-columns: 1fr; }
+}
