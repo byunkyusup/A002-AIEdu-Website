@@ -22,9 +22,23 @@ npm run build      # tsc -b + vite build → dist/
 npm run preview    # 프로덕션 빌드 미리보기
 ```
 
+## 배포 (Vercel · Git 연동)
+
+`main`에 push하면 Vercel이 자동으로 빌드·배포한다(PR마다 프리뷰 URL 생성).
+
+- **최초 연결**: vercel.com → *Add New → Project → Import Git Repository* 에서
+  `byunkyusup/A002-AIEdu-Website` 선택. Framework는 **Vite** 자동 감지(Build `npm run build`, Output `dist`).
+- **`vercel.json`**: `/api/*`는 serverless function으로 통과, 나머지는 `index.html`로 SPA fallback.
+- **Serverless function**: `api/*.ts`(`@vercel/node`)는 Vercel이 별도 빌드한다.
+  `tsconfig.json`의 `include`가 `["src"]`라 메인 `tsc -b`에는 포함되지 않는다.
+  현재는 헬스체크 스텁 `GET /api/health`만 있으며, 실제 핸들러는 이 파일을 본떠 추가한다.
+- **주의**: `@vercel/node` 추가 시 `package-lock.json`도 함께 커밋한다(Vercel은 lock이 있으면 `npm ci`로 설치).
+
 ## 구조
 
 ```
+api/
+└── health.ts      @vercel/node 헬스체크 스텁 (serverless 함수 템플릿)
 src/
 ├── styles/        tokens.css(디자인 토큰) · global.css(리셋·그리드·리빌)
 ├── data/          content.ts — 모든 카피·데이터의 단일 출처
